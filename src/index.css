@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-primary text-textPrimary min-h-screen;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(100, 255, 218, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(100, 255, 218, 0.05) 0%, transparent 50%);
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-textSecondary hover:text-secondary transition-colors duration-300 relative;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute left-0 bottom-[-4px] w-0 h-[2px] bg-secondary transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-textPrimary mb-12 relative;
+  }
+
+  .section-title::after {
+    @apply content-[''] absolute left-0 bottom-[-8px] w-16 h-1 bg-secondary;
+  }
+  
+  .btn-primary {
+    @apply px-8 py-3 bg-transparent border-2 border-secondary text-secondary rounded-md 
+    hover:bg-secondary/10 hover:scale-105 transition-all duration-300 font-medium
+    shadow-lg shadow-secondary/10;
+  }
+
+  .card {
+    @apply bg-tertiary/50 backdrop-blur-sm border border-tertiary rounded-xl 
+    hover:border-secondary/50 transition-all duration-300;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-tertiary/50 border border-tertiary rounded-lg 
+    text-textPrimary focus:outline-none focus:border-secondary 
+    placeholder:text-textSecondary/50 transition-all duration-300;
+  }
+}
+
+/* Remove default styles that might interfere */
+:root {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-tertiary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-secondary/50;
+}

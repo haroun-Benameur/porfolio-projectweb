@@ -50,7 +50,7 @@ const Hero = () => {
             <a href="#projects" className="btn-primary">
               View My Work
             </a>
-            <a href="contact" className="btn-primary">
+            <a href="/contact" className="btn-primary">
               Contact Me
             </a>
             

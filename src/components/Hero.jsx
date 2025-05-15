@@ -4,8 +4,8 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-secondary/10 rounded-full filter blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-secondary/10 rounded-full filter blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-secondary/5 rounded-full filter blur-[100px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/5 rounded-full filter blur-[100px]" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -15,7 +15,6 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto"
         >
-          
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -50,10 +49,13 @@ const Hero = () => {
             <a href="#projects" className="btn-primary">
               View My Work
             </a>
-            <a href="/contact" className="btn-primary">
-              Contact Me
+            <a 
+              href="/cv haroun ben ameur.pdf" 
+              download 
+              className="btn-primary"
+            >
+              Download CV
             </a>
-            
           </motion.div>
 
           <motion.div

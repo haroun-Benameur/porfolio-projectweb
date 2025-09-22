@@ -3,12 +3,6 @@ import { FaGithub } from 'react-icons/fa'
 const Projects = () => {
   const projects = [
     {
-      title: "Proxym-IT Internship - Git & Elasticsearch Analytics",
-      description: "Developed an advanced analytics system integrating GitHub with Elasticsearch for project progress tracking. Implemented fuzzy queries and semantic search capabilities to enhance data analysis and performance metrics visualization. Created detailed performance curves and statistical reports for development operations.",
-      technologies: ["Git", "Elasticsearch", "Data Analytics", "Fuzzy Search", "Performance Metrics", "Statistical Analysis"],
-      github: "https://github.com/haroun-Benameur/proxym_project/tree/main/Desktop/Stage-Proxym-2024/gitPython/gitTerminal"
-    },
-    {
       title: "Car Service Appointment System",
       description: "A comprehensive automotive service booking platform enabling clients to schedule maintenance appointments at car dealerships. Features include intelligent time slot management, service type selection, and automated scheduling system for optimal resource utilization.",
       technologies: ["JavaScript", "React", "Bootstrap", "Django", "Redux"],

@@ -15,6 +15,18 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto"
         >
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.25 }}
+            className="md:float-right md:ml-8 mb-6 md:mb-0 mt-10 "
+          >
+            <img
+              src="/haroun2_pg.png"
+              alt="Haroun Ben Ameur"
+              className="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover ring-4 ring-secondary/40 bg-primary scale-110 md:scale-140"
+            />
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -50,7 +62,7 @@ const Hero = () => {
               View My Work
             </a>
             <a 
-              href="/cv haroun ben ameur.pdf" 
+              href="/cv_harounbenameur_engV.pdf" 
               download 
               className="btn-primary"
             >

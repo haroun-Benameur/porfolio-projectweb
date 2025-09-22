@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline'
+import emailjs from 'emailjs-com'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,11 +9,36 @@ const Contact = () => {
     email: '',
     message: '',
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [status, setStatus] = useState({ type: '', message: '' })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Add your form submission logic here
-    console.log('Form submitted:', formData)
+    if (isSubmitting) return
+    setIsSubmitting(true)
+    setStatus({ type: '', message: '' })
+
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      }
+
+      await emailjs.send(
+        'service_lwqi9fv',
+        'template_pmjv0gk',
+        templateParams,
+        'nUJ_h1fln31lq_82x'
+      )
+
+      setStatus({ type: 'success', message: 'Thanks! Your message has been sent.' })
+      setFormData({ name: '', email: '', message: '' })
+    } catch (error) {
+      setStatus({ type: 'error', message: 'Sorry, something went wrong. Please try again.' })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e) => {
@@ -135,10 +161,16 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="btn-primary w-full"
+                className="btn-primary w-full disabled:opacity-60 disabled:cursor-not-allowed"
+                disabled={isSubmitting}
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
+              {status.message && (
+                <p className={status.type === 'success' ? 'text-green-500' : 'text-red-500'}>
+                  {status.message}
+                </p>
+              )}
             </form>
           </div>
         </motion.div>

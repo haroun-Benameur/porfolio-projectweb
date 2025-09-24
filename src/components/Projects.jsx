@@ -23,7 +23,7 @@ const Projects = () => {
     },
     {
       title: "Employment Platform",
-      description: "A comprehensive employment platform built with TypeScript, featuring job listings, candidate management, and application tracking.",
+      description: "A comprehensive employment platform built with JavaScript, featuring job listings, candidate management, and application tracking.",
       technologies: [ "ReactJs", "Node.js", "Express.js","MongoDB"],
       github: "https://github.com/haroun-Benameur/-Employment-Platform.git"
     },

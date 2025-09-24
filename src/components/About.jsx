@@ -4,17 +4,25 @@ const About = () => {
   const technicalSkills = [
     'Full-Stack Development',
     'JavaScript',
-    'Bootstrap',
+   
     'React.js',
-    'Tailwind CSS',
+    'Elasticsearch',
+  
     'Next.js',
     'Git/Github',
     'Python',
     'Java',
     'Django',
     'Spring Boot',  
+    'Express.js',
+    'Node.js',
+    'MySQL',
     'SQL',
     'PostgreSQL',
+    'MongoDB',
+    'Bootstrap',
+    'Tailwind CSS',
+    
   ]
 
   const softSkills = [

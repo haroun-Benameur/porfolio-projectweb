@@ -22,21 +22,22 @@ const Projects = () => {
       github: "https://github.com/haroun-Benameur/ISSATSO-DEPARTMENT-FULL"
     },
     {
-      title: "E-Commerce Platform",
-      description: "An e-commerce solution featuring product catalog management, shopping cart functionality, and user-friendly product browsing. Implemented secure user authentication and intuitive product search with category filtering.",
-      technologies: ["JavaScript", "React", "Django"],
-      github: "https://github.com/haroun-Benameur/E-Commerce"
-    },
-    {
       title: "Employment Platform",
       description: "A comprehensive employment platform built with TypeScript, featuring job listings, candidate management, and application tracking.",
-      technologies: ["TypeScript", "React", "Node.js", "PostgreSQL"],
-      github: "https://github.com/haroun-Benameur/Employment-Platform"
+      technologies: [ "ReactJs", "Node.js", "Express.js","MongoDB"],
+      github: "https://github.com/haroun-Benameur/-Employment-Platform.git"
     },
+    {
+      title: "E-Commerce Platform",
+      description: "An e-commerce solution featuring product catalog management, shopping cart functionality, and user-friendly product browsing. Implemented secure user authentication and intuitive product search with category filtering.",
+      technologies: ["JavaScript", "React", "Django","postgres"],
+      github: "https://github.com/haroun-Benameur/E-Commerce"
+    },
+    
     {
       title: "Hotel Management System",
       description: "A comprehensive hotel management solution with room booking, staff management, and billing features.",
-      technologies: ["TypeScript", "React", "Spring Boot", "MySQL"],
+      technologies: [ "ReactJs", "Spring Boot", "MySQL"],
       github: "https://github.com/haroun-Benameur/-Hotel-Management-System"
     },
 

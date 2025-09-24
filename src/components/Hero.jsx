@@ -62,7 +62,7 @@ const Hero = () => {
               View My Work
             </a>
             <a 
-              href="/cv_harounbenameur_engV.pdf" 
+              href="/EngV_harounbenameur.pdf" 
               download 
               className="btn-primary"
             >

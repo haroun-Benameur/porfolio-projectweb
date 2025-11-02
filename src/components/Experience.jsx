@@ -11,7 +11,6 @@ const Experience = () => {
         "Python",
         "Django",
         "Elasticsearch",
-        "Angular",
         "Google Gemini",
         "AI (Generative Models)"
       ],

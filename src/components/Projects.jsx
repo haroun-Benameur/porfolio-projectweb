@@ -1,64 +1,153 @@
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
   const projects = [
     {
-      title: "Car Service Appointment System",
-      description: "A comprehensive automotive service booking platform enabling clients to schedule maintenance appointments at car dealerships. Features include intelligent time slot management, service type selection, and automated scheduling system for optimal resource utilization.",
-      technologies: ["JavaScript", "React", "Bootstrap", "Django", "Redux"],
-      github: "https://github.com/haroun-Benameur/Appointment-Service-Car"
+      title: "ISSATSO – Classroom Reservation Management System for Department Heads",
+      description: (
+        <>
+          Development of a web application enabling department heads to manage classroom reservations
+          for professors according to specific time slots. The system also allowed professors to submit reservation requests and
+          receive real-time notifications through WebSockets, ensuring efficient communication and scheduling within academic
+          departments.
+        </>
+      ),
+      technologies: [
+        "React",
+        "Bootstrap",
+        "Redux",
+        "Spring Boot",
+        "PostgreSQL",
+        "WebSockets",
+      ],
+      github: "https://github.com/haroun-Benameur/ISSATSO-DEPARTMENT-FULL",
     },
     {
-      title: "Gestion-pfes - Classroom Distribution System",
-      description: "Backend development for an intelligent classroom distribution system using genetic algorithms. Collaborated on a team project to optimize classroom allocation with real-time scheduling and conflict resolution. Implemented RESTful APIs and database management using Django/Python.",
-      technologies: ["Python", "Django", "REST API", "Genetic Algorithm", "Team Collaboration"],
-      github: "https://github.com/walaoueslati/Gestion-pfes"
+      title: "SmartPath – Intelligent Learning Platform",
+      description: (
+        <>
+          Design and development of an intelligent educational platform featuring AI chatbots and voice tutors
+          enhanced with EVA and personas to improve response relevance and performance, integrating real-time speech recognition
+          and text generation.
+        </>
+      ),
+      technologies: [
+        "Next.js",
+        "Tailwind CSS",
+        "Django REST Framework",
+        "PostgreSQL",
+        "WebSockets",
+        "Eva",
+        "LiveKit",
+        "Deepgram",
+        "Cerebras LLM",
+      ],
+      github: "https://github.com/haroun-Benameur/SmartPath-EducationPlatform",
     },
-   
     {
-      title: "ISSATSO Department Management",
-      description: "A comprehensive department management system for classroom reservations by professors with real-time notifications via WebSockets. Department heads can manage Claasroom bookings according to specific time slots.",
-      technologies: ["JavaScript", "React", "Redux", "Spring Boot", "WebSocket", "Bootstrap"],
-      github: "https://github.com/haroun-Benameur/ISSATSO-DEPARTMENT-FULL"
+      title: "CarCare App – Automotive Appointment Scheduling",
+      description: (
+        <>
+          Design and implementation of a scheduling platform for automotive dealerships, allowing clients to book
+          services online with integrated time-slot management. The solution improved customer experience while optimizing
+          workshop resource allocation.
+        </>
+      ),
+      technologies: ["React", "Redux", "Django", "PostgreSQL"],
+      github: "https://github.com/haroun-Benameur/Appointment-Service-Car",
     },
     {
-      title: "Employment Platform",
-      description: "A comprehensive employment platform built with JavaScript, featuring job listings, candidate management, and application tracking.",
-      technologies: [ "ReactJs", "Node.js", "Express.js","MongoDB"],
-      github: "https://github.com/haroun-Benameur/-Employment-Platform.git"
+      title: "Thesis Defense Management System (Classroom Distribution System)",
+      description: (
+        <>
+          Backend development for an intelligent scheduling system allocating classrooms for thesis defenses.
+          A genetic algorithm optimized room distribution while considering teacher availability and constraints. Exposed via a
+          REST API and integrated with a React frontend for efficiency.
+        </>
+      ),
+      technologies: [
+        "Python",
+        "Django",
+        "REST API",
+        "Genetic Algorithm",
+        "React",
+        "Redux",
+      ],
+      github: "https://github.com/walaoueslati/Gestion-pfes",
     },
     {
-      title: "E-Commerce Platform",
-      description: "An e-commerce solution featuring product catalog management, shopping cart functionality, and user-friendly product browsing. Implemented secure user authentication and intuitive product search with category filtering.",
-      technologies: ["JavaScript", "React", "Django","postgres"],
-      github: "https://github.com/haroun-Benameur/E-Commerce"
+      title: "HireSphere – Employment Platform",
+      description: (
+        <>
+         Backend development of a recruitment platform streamlining the hiring process from job posting to candidate selection. Implemented a RESTful API with secure authentication, real-time applicant tracking, and an intuitive recruiter dashboard to enhance efficiency and collaboration.
+        </>
+      ),
+      technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
+      github: "https://github.com/haroun-Benameur/-Employment-Platform.git",
     },
-    
     {
-      title: "Hotel Management System",
-      description: "A comprehensive hotel management solution with room booking, staff management, and billing features.",
-      technologies: [ "ReactJs", "Spring Boot", "MySQL"],
-      github: "https://github.com/haroun-Benameur/-Hotel-Management-System"
+      title: "Brain Tumor Detection – Computer Vision Project",
+      description: (
+        <>
+          Development of a CNN model for automatic brain tumor detection from MRI images. Implemented preprocessing and data augmentation, and compared a custom CNN with MobileNetV2 to improve classification accuracy and achieve high validation performance
+        </>
+      ),
+      technologies: [
+        "Python",
+        "TensorFlow",
+        "Keras",
+        "OpenCV",
+        "NumPy",
+        "Matplotlib",
+        "MobileNetV2",
+      ],
+      github: "#",
     },
+  ];
 
-   
-    
-  ]
+  // --- Certificates with PDF links ---
+  const certificates = [
+    {
+      title: "Building LLM Applications with Prompt Engineering – NVIDIA (2025)",
+      description:
+        "Hands-on training on large language models, prompt design, and application development using generative AI.",
+      pdf: "/BuildingLlmCertification.pdf",
+    },
+    {
+      title: "Deep Learning Certificate – NVIDIA (2025)",
+      description:
+        "Training on neural networks, model optimization, and AI workflows.",
+      pdf: "/certif_deep_learning.pdf",
+    },
+    {
+      title:
+        "Advanced Fullstack Web Development (MERN) – Orange Digital Center (2025)",
+      description:
+        "Comprehensive certification in fullstack development with MongoDB, Express.js, React, and Node.js.",
+      pdf: "/WebDev.pdf",
+    },
+  ];
 
   return (
     <section id="projects" className="py-20 bg-primary">
       <div className="container mx-auto px-4">
+        {/* PROJECTS SECTION */}
         <h2 className="text-3xl font-bold text-textPrimary mb-8">Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-tertiary rounded-lg overflow-hidden">
+            <div
+              key={index}
+              className="bg-tertiary rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+            >
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-textPrimary mb-2">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-textPrimary mb-2">
+                  {project.title}
+                </h3>
                 <p className="text-textSecondary mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, techIndex) => (
+                  {project.technologies.map((tech, i) => (
                     <span
-                      key={techIndex}
+                      key={i}
                       className="px-3 py-1 text-sm bg-primary text-secondary rounded-full"
                     >
                       {tech}
@@ -78,9 +167,30 @@ const Projects = () => {
             </div>
           ))}
         </div>
+
+        {/* CERTIFICATES SECTION */}
+        <h2 className="text-3xl font-bold text-textPrimary mt-16 mb-8">
+          Certificates
+        </h2>
+        <div className="space-y-6">
+          {certificates.map((cert, index) => (
+            <a
+              key={index}
+              href={cert.pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-tertiary p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow hover:scale-[1.01] duration-200"
+            >
+              <h3 className="text-xl font-semibold text-textPrimary mb-2 hover:text-secondary transition-colors">
+                {cert.title}
+              </h3>
+              <p className="text-textSecondary">{cert.description}</p>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects 
+export default Projects;

@@ -2,29 +2,33 @@ import { motion } from 'framer-motion'
 
 const About = () => {
   const technicalSkills = [
-    'Full-Stack Development',
-    'JavaScript',
-   
-    'React.js',
+    // 🖥️ Frontend
+    'React.js / Next.js',
+    'TypeScript / JavaScript (ES6+)',
+    'Tailwind CSS / Bootstrap',
+    'Responsive UI & Accessibility',
+  
+    // ⚙️ Backend
+    'Node.js / Express.js',
+    'Django / Django REST Framework',
+    'Spring Boot (Java)',
+    'RESTful API Design',
+  
+    // 🧠 AI & Data
+    'Python (AI, NLP, Automation)',
+    'Cerebras LLM / Deepgram / EVA',
+    'RAG & Generative AI Integration',
     'Elasticsearch',
   
-    'Next.js',
-    'Git/Github',
-    'Python',
-    'Java',
-    'Django',
-    'Spring Boot',  
-    'Express.js',
-    'Node.js',
-    'MySQL',
-    'SQL',
-    'PostgreSQL',
-    'MongoDB',
-    'Bootstrap',
-    'Tailwind CSS',
-    
+    // 🗄️ Databases
+    'PostgreSQL / MySQL / MongoDB',
+    'SQL Optimization & Schema Design',
+  
+    // ☁️ DevOps & Tools
+    'Git / GitHub / ',
+    'WebSockets / LiveKit / Real-time Apps',
   ]
-
+  
   const softSkills = [
     'Public Speaking',
     'Team Leadership',
@@ -48,8 +52,10 @@ const About = () => {
             <div className="space-y-6">
               <div>
                 <p className="text-textSecondary">
-                  Hello! I'm a Full-Stack Developer passionate about creating end-to-end solutions that combine beautiful user interfaces with robust backend systems. With expertise in both frontend and backend technologies, I specialize in building scalable web applications that deliver exceptional user experiences. My journey in web development has equipped me with a comprehensive understanding of the entire development stack, from user interface design to database architecture.
-                </p>
+                Software Engineering student passionate about web development and artificial intelligence. 
+Experienced in designing full-stack web applications and integrating complex systems, I build 
+solutions powered by AI models and agents, combining RAG, text generation, and intelligent 
+automation to create efficient, reliable, and innovative applications.                </p>
               </div>
 
               <div className="space-y-4">

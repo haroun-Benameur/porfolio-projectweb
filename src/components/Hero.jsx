@@ -58,7 +58,7 @@ const Hero = () => {
             transition={{ delay: 0.6 }}
             className="flex flex-wrap gap-4"
           >
-            <a href="#projects" className="btn-primary">
+            <a href="#experience" className="btn-primary">
               View My Work
             </a>
             <a 

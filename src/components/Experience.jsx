@@ -15,7 +15,7 @@ const Experience = () => {
         "AI (Generative Models)"
       ],
       description:
-        "Developed a platform to automate test case generation from Functional Specification Documents (FSD). Implemented a pipeline to split FSD files, perform semantic indexing in Elasticsearch using Google Gemini embeddings, and generate test cases via AI prompts. Built an Angular frontend to manage files, modules, and test cases, and a Django backend with semantic search to optimize validation and testing processes at Proxym-IT."
+        "Developed the backend of a platform to automate test case generation from Functional Specification Documents (FSD). Designed and implemented a Retrieval-Augmented Generation (RAG) pipeline that splits FSD files, performs semantic indexing in Elasticsearch using Google Gemini embeddings, and generates accurate test cases via AI prompts. Built and optimized the Django backend with semantic search and API endpoints to enhance validation and testing processes at Proxym-IT."
     },
     {
       company: "Proxym-IT",

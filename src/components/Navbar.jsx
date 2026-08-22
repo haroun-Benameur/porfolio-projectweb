@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
@@ -6,14 +6,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
 
-  const navItems = [
-    { label: 'Home', path: '/' },
-    { label: 'Experience', path: '/#experience' },
-    { label: 'Projects', path: '/#projects' },
-    { label: 'Contact', path: '/contact' },
+  const navLinks = [
+    { label: 'About', id: 'about' },
+    { label: 'Experience', id: 'experience' },
+    { label: 'Projects', id: 'projects' },
+    { label: 'Certifications', id: 'certifications' },
   ]
 
   const scrollToSection = (sectionId) => {
+    setIsOpen(false)
     if (location.pathname !== '/') {
       window.location.href = `/#${sectionId}`
     } else {
@@ -25,44 +26,43 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-primary/90 backdrop-blur-sm fixed w-full z-50">
+    <nav className="bg-primary/90 backdrop-blur-sm fixed w-full z-50 border-b border-tertiary/50">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <Link to="/" className="text-xl font-bold text-textPrimary">
-              Haroun Ben Ameur
+        <div className="flex justify-between h-16 items-center">
+
+          {/* Logo */}
+          <Link to="/" className="text-xl font-bold text-textPrimary hover:text-secondary transition-colors">
+            Haroun<span className="text-secondary">.BA</span>
+          </Link>
+
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navLinks.map((item) => (
+              <button
+                key={item.label}
+                onClick={() => scrollToSection(item.id)}
+                className="nav-link text-sm font-medium"
+              >
+                {item.label}
+              </button>
+            ))}
+            <Link
+              to="/contact"
+              className="btn-primary text-sm py-2 px-5"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              item.path.includes('#') ? (
-                <button
-                  key={item.label}
-                  onClick={() => scrollToSection(item.path.replace('/#', ''))}
-                  className="text-textSecondary hover:text-secondary transition-colors"
-                >
-                  {item.label}
-                </button>
-              ) : (
-                <Link
-                  key={item.label}
-                  to={item.path}
-                  className="text-textSecondary hover:text-secondary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              )
-            ))}
-          </div>
-
+          {/* Mobile hamburger */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-textSecondary hover:text-secondary transition-colors"
+              aria-label="Toggle menu"
             >
-              {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+              {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
             </button>
           </div>
         </div>
@@ -70,31 +70,26 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {navItems.map((item) => (
-              item.path.includes('#') ? (
-                <button
-                  key={item.label}
-                  onClick={() => {
-                    scrollToSection(item.path.replace('/#', ''))
-                    setIsOpen(false)
-                  }}
-                  className="block w-full text-left px-3 py-2 text-textSecondary hover:text-secondary transition-colors"
-                >
-                  {item.label}
-                </button>
-              ) : (
-                <Link
-                  key={item.label}
-                  to={item.path}
-                  className="block px-3 py-2 text-textSecondary hover:text-secondary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              )
+        <div className="md:hidden bg-tertiary/95 backdrop-blur-sm border-t border-secondary/20">
+          <div className="px-4 pt-3 pb-4 space-y-1">
+            {navLinks.map((item) => (
+              <button
+                key={item.label}
+                onClick={() => scrollToSection(item.id)}
+                className="block w-full text-left px-4 py-3 text-textSecondary hover:text-secondary hover:bg-secondary/10 rounded-lg transition-all duration-200 text-sm font-medium"
+              >
+                {item.label}
+              </button>
             ))}
+            <div className="pt-2">
+              <Link
+                to="/contact"
+                className="block text-center btn-primary text-sm py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </Link>
+            </div>
           </div>
         </div>
       )}
@@ -102,4 +97,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar 
+export default Navbar

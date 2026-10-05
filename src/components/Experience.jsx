@@ -2,6 +2,20 @@ import { motion } from 'framer-motion'
 
 const experiences = [
   {
+    role: 'AI Instructor',
+    company: 'GoMyCode Maghreb',
+    period: 'September 2026 – Present',
+    type: 'Instructor',
+    project: 'AI & DevOps Training',
+    projectLabel: 'Web Dev, AI Agents, RAG, MCP & DevOps Bootcamp',
+    description:
+      'Training covering web development and Python foundations, alongside an advanced track in AI (prompt engineering, LLM agents, RAG, MCP, deployment, risk management) and DevOps (Linux, Docker, CI/CD, Azure, monitoring). Responsible for curriculum delivery, hands-on labs, and guiding learners through real-world AI and cloud deployment scenarios.',
+    technologies: [
+      'Python', 'LangChain', 'LLM', 'RAG', 'MCP',
+      'Docker', 'CI/CD', 'Azure', 'Linux', 'Prometheus', 'Grafana',
+    ],
+  },
+  {
     role: 'Fullstack & AI Developer',
     company: 'Talan Tunisia',
     period: 'February 2026 – June 2026',
